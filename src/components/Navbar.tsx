@@ -20,8 +20,10 @@ export default function Navbar() {
 
             <div className="flex-1 flex justify-center font-inter hover:text-">
                 <div className="flex gap-8 text-lg">
-                    <Link to="/directory" className="hover:text-pink-500 transition">Explore</Link>
+                    <Link to="/explore" className="hover:text-pink-500 transition">Explore</Link>
+                    <span className="select-none pointer-events-none opacity-60">|</span>
                     <Link to="/pricing" className="hover:text-pink-500 transition">Pricing</Link>
+                    <span className="select-none pointer-events-none opacity-60">|</span>
                     <Link to="/about" className="hover:text-pink-500 transition">About</Link>
                 </div>
             </div>
@@ -30,14 +32,14 @@ export default function Navbar() {
                 {!isAuthenticated ? (
                     <>
                         <Link
-                            to="/auth"
-                            className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-black transition"
+                            to="/auth?mode=login"
+                            className="px-4 py-2 border border-white hover:bg-white hover:text-black transition"
                         >
                             Log In
                         </Link>
                         <Link
-                            to="/auth"
-                            className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-black transition"
+                            to="/auth?mode=signup"
+                            className="px-4 py-2 border border-white hover:bg-white hover:text-black transition"
                         >
                             Sign Up
                         </Link>
