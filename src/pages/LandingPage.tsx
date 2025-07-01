@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
 
             <FeaturesSection></FeaturesSection>
             {/* Footer */}
-            <footer className="py-8 text-center text-sm text-gray-400 relative z-10">
+            <footer className="py-3 text-center text-sm text-gray-400 relative z-10">
                 &copy; 2025 Voyagr. All rights reserved.
             </footer>
         </main>

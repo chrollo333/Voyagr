@@ -1,8 +1,6 @@
-// StarryBackground component
 const StarryBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-b from-black via-indigo-900 to-purple-900">
-      {/* Static stars */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         {[...Array(100)].map((_, i) => {
           const style = {
