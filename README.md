@@ -1,11 +1,11 @@
-# Voyagr 🌐
+# Voyagr 🚀
 
 **A creator-powered showcase and community platform.**  
 Discover, promote, and engage with creators — all in one place.
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 Voyagr is a web application where content creators can:  
 - Create their own showcase page with social links, embedded content, and stats  
@@ -20,7 +20,7 @@ Fans can:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend  
 - React (with Vite)  
@@ -36,7 +36,7 @@ Fans can:
 
 ---
 
-## 📦 Features
+## Features
 
 - 🔐 User authentication and profile management (Supabase Auth)  
 - 📄 Creator onboarding with free trial period  
@@ -51,7 +51,7 @@ Fans can:
 
 ---
 
-## 📁 Database Schema (Supabase)
+## Database Schema (Supabase)
 
 | Table             | Description                            |
 |-------------------|-------------------------------------|
@@ -64,12 +64,3 @@ Fans can:
 | `featured_creators` | Featured listing periods and status  |
 
 ---
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Node.js >=16  
-- npm or yarn  
-- A [Supabase](https://supabase.com/) account and project  
-- Stripe account (for payments)  
