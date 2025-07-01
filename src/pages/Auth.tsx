@@ -1,7 +1,7 @@
 // src/pages/Auth.tsx
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabaseClient';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 
 export default function Auth() {
@@ -10,8 +10,10 @@ export default function Auth() {
     const [error, setError] = useState('');
     const [searchParams, setSearchParams] = useSearchParams();
     const mode = searchParams.get('mode');
+    const navigate = useNavigate();
 
     const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
+    const [isAuthenticated, setIsAuthenticated] = useState(false); //currently unused, for stuff that happens on authentication later
 
 
     useEffect(() => {
@@ -22,6 +24,22 @@ export default function Auth() {
         }
     }, [mode]);
 
+    useEffect(() => {
+        // listens for auth state changes
+        const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+            if (session && session.user) {
+                setIsAuthenticated(true);
+                // redirect to landing page after login
+                navigate('/');
+            } else {
+                setIsAuthenticated(false);
+            }
+        });
+        // cleanup
+        return () => {
+            listener.subscription.unsubscribe();
+        };
+    }, [navigate]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

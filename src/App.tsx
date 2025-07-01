@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage'
 import Navbar from './components/Navbar'
 import StarryBackground from './components/StarryBackground'
 import Auth from './pages/Auth'
+import Explore from './pages/Explore';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function AnimatedRoutes() {
           path="/explore" 
           element={
             <AnimatedPage>
-              <LandingPage />
+              <Explore />
             </AnimatedPage>
           } 
         />
