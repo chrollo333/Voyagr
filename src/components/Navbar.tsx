@@ -48,7 +48,7 @@ export default function Navbar() {
                         <span className="text-sm opacity-80">{user.email}</span>
                         <button
                             onClick={handleLogOut}
-                            className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-black transition"
+                            className="px-4 py-2 border border-white hover:bg-white hover:text-black transition"
                         >
                             Log Out
                         </button>
