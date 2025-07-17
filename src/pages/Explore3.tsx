@@ -70,13 +70,11 @@ export default function Explore3() {
     return matchesSearch && matchesTags;
   });
 
-  // ...existing code...
 
   if (loading) return <div className="text-center py-12">Loading creators...</div>;
 
   return (
     <div className="font-inter">
-      {/* Search Bar */}
       <div className="relative max-w-2xl mx-auto mt-8 mb-8">
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
         <input
@@ -182,8 +180,7 @@ export default function Explore3() {
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mt-4">
-                  <div className="flex gap-6 text-xs text-gray-400">
-                    {/* Add metrics here if you want */}
+                  <div className="flex gap-6 text-xs text-gray-400"> {/* place for metrics later  */ }
                   </div>
                   <div className="flex space-x-1.5">
                     <button
@@ -211,7 +208,7 @@ export default function Explore3() {
           ))}
         </div>
 
-        {/* Empty State */}
+        {/* if creator grid is in empty state */}
         {filteredCreators.length === 0 && (
           <div className="text-center py-12">
             <div className="text-gray-400 text-lg mb-4">No creators found matching your criteria</div>
