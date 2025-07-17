@@ -1,7 +1,7 @@
 // Combined Explore3: Modern UI from Explore2, data from Supabase like Explore
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { Search, Users, Heart, TrendingUp, Star, Play, Calendar, DollarSign, Twitter, Instagram, Youtube, Twitch, Globe, Github } from 'lucide-react';
+import { Search, Heart, TrendingUp } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import GradientButton from "../components/GradientButton";
 
@@ -70,36 +70,7 @@ export default function Explore3() {
     return matchesSearch && matchesTags;
   });
 
-  // Social icon helpers (not used unless you add social fields to DB)
-  const getSocialIcon = (platform: string) => {
-    switch(platform) {
-      case 'twitter': return <Twitter className="w-4 h-4" />;
-      case 'instagram': return <Instagram className="w-4 h-4" />;
-      case 'youtube': return <Youtube className="w-4 h-4" />;
-      case 'twitch': return <Twitch className="w-4 h-4" />;
-      case 'github': return <Github className="w-4 h-4" />;
-      case 'website': return <Globe className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
-    }
-  };
-  const getSocialColor = (platform: string) => {
-    switch(platform) {
-      case 'twitter': return 'hover:text-blue-400';
-      case 'instagram': return 'hover:text-pink-400';
-      case 'youtube': return 'hover:text-red-400';
-      case 'twitch': return 'hover:text-purple-400';
-      case 'github': return 'hover:text-gray-300';
-      case 'website': return 'hover:text-green-400';
-      default: return 'hover:text-gray-300';
-    }
-  };
-
-  // Number formatting
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num?.toString() ?? '';
-  };
+  // ...existing code...
 
   if (loading) return <div className="text-center py-12">Loading creators...</div>;
 

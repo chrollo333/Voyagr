@@ -6,7 +6,7 @@ import LandingPage from './pages/LandingPage'
 import Navbar from './components/Navbar'
 import StarryBackground from './components/StarryBackground'
 import Auth from './pages/Auth'
-import Explore from './pages/Explore';
+// import Explore from './pages/Explore';
 import Explore3 from './pages/Explore3';
 import CreatePage from './pages/CreatePage';
 
