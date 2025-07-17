@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import StarryBackground from './components/StarryBackground'
 import Auth from './pages/Auth'
 import Explore from './pages/Explore';
+import CreatePage from './pages/CreatePage';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -35,6 +36,14 @@ function AnimatedRoutes() {
           element={
             <AnimatedPage>
               <Auth />
+            </AnimatedPage>
+          } 
+        />
+         <Route 
+          path="/create" 
+          element={
+            <AnimatedPage>
+              <CreatePage />
             </AnimatedPage>
           } 
         />

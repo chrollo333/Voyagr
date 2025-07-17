@@ -1,5 +1,6 @@
 import React from "react";
 import FeaturesSection from "./sections/FeaturesSection";
+import GradientButton from "../components/GradientButton";
 
 const LandingPage: React.FC = () => {
   return (
@@ -16,15 +17,12 @@ const LandingPage: React.FC = () => {
           Discovery, promotion, and engagement with content creators — all in
           one place.
         </p>
+        
         <div className="flex space-x-4">
-          <a
-            href="/explore"
-            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white  
-            rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200
-            hover:from-pink-400 hover:to-purple-500 active:scale-95"
-          >
+          <GradientButton to="/explore">
             Get Started
-          </a>
+          </GradientButton>
+
           <a
             href="#learn-more"
             className="px-6 py-3 bg-gradient-to-r  text-white  
