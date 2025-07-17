@@ -13,7 +13,6 @@ export default function Auth() {
     const navigate = useNavigate();
 
     const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
-    const [isAuthenticated, setIsAuthenticated] = useState(false); //currently unused, for stuff that happens on authentication later
 
 
     useEffect(() => {
@@ -25,14 +24,10 @@ export default function Auth() {
     }, [mode]);
 
     useEffect(() => {
-        // listens for auth state changes
-        const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+        // listens for auth state changes and redirects after login
+        const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
             if (session && session.user) {
-                setIsAuthenticated(true);
-                // redirect to landing page after login
                 navigate('/');
-            } else {
-                setIsAuthenticated(false);
             }
         });
         // cleanup

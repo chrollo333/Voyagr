@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type CreatorProfile = {
   id: string;
   user_id: string;
