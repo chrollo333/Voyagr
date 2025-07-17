@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import StarryBackground from './components/StarryBackground'
 import Auth from './pages/Auth'
 import Explore from './pages/Explore';
+import Explore3 from './pages/Explore3';
 import CreatePage from './pages/CreatePage';
 
 function AnimatedRoutes() {
@@ -27,7 +28,7 @@ function AnimatedRoutes() {
           path="/explore" 
           element={
             <AnimatedPage>
-              <Explore />
+              <Explore3 />
             </AnimatedPage>
           } 
         />
